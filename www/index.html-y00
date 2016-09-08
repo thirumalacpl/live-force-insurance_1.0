@@ -8420,8 +8420,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
 </div>
 </div>
 <!--radio end-->
-
-
 <!--accident 95 3field start-->
 <div id="accident_three_field_nine_five">
 <!--accident question start-->
@@ -8449,24 +8447,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
     </select>
 </div>
 <!--accident question start  end   end-->
-
-<!--travel start-->
-    <label for="textarea2b">Travel Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="travel_expen" id="travel_expen_nine_five" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Actual Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="actua_exp" id="actua_exp_nine_five" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Miscellaneous Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="misc_e" id="misc_e_nine_five" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-
-<!--travel end-->
 
     <label for="textarea2b">Investigators Version of the Accident in Detail:<span style="color: rgb(246, 16, 63);"></span></label>
 <textarea cols="40" rows="8" name="insu_accident_nine_five_a" id="insu_accident_nine_five_a" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
@@ -8521,23 +8501,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
     <br>
 </div>
 <!--question start fir end end-->
-<!--travel start-->
-    <label for="textarea2b">Travel Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="travel_expen" id="travel_expen_nine_seven" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Actual Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="actua_exp" id="actua_exp_nine_seven" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Miscellaneous Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="misc_e" id="misc_e_nine_seven" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-
-<!--travel end-->
     <label for="textarea2b">FIR Version of the Accident:<span style="color: rgb(246, 16, 63);"></span></label>
 <textarea cols="40" rows="8" name="insu_accident_nine_seven_a" id="insu_accident_nine_seven_a" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
     margin: 0px auto;
@@ -8551,23 +8514,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
   <!--fir 97 2field end-->
     <!--owner driver 100 2field start-->
 <div id="owner_driver_two_field_hundred">
-<!--travel start-->
-    <label for="textarea2b">Travel Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="travel_expen" id="travel_expen_100" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Actual Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="actua_exp" id="actua_exp_100" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Miscellaneous Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="misc_e" id="misc_e_100" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-
-<!--travel end-->
     <label for="textarea2b">Owner's Version of the Accident :<span style="color: rgb(246, 16, 63);"></span></label>
 <textarea cols="40" rows="8" name="insu_accident_hundred_a" id="insu_accident_hundred_a" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
     margin: 0px auto;
@@ -8629,23 +8575,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
     <br>
     </div>
 <!--question end end end-->
-<!--travel start-->
-    <label for="textarea2b">Travel Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="travel_expen" id="travel_expen_nine_nine" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Actual Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="actua_exp" id="actua_exp_nine_nine" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Miscellaneous Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="misc_e" id="misc_e_nine_nine" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-
-<!--travel end-->
     <label for="textarea2b">Driver's Version of the Accident :<span style="color: rgb(246, 16, 63);"></span></label>
 <textarea cols="40" rows="8" name="insu_accident_nine_nine_a" id="insu_accident_nine_nine_a" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
     margin: 0px auto;
@@ -8745,23 +8674,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
 
 </div>
 <!--claimant quest end end-->
-<!--travel start-->
-    <label for="textarea2b">Travel Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="travel_expen" id="travel_expen_102" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Actual Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="actua_exp" id="actua_exp_102" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Miscellaneous Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="misc_e" id="misc_e_102" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-
-<!--travel end-->
     <label for="textarea2b">Claimant Version of the Accident:<span style="color: rgb(246, 16, 63);"></span></label>
 <textarea cols="40" rows="8" name="insu_accident_one_zero_two_a" id="insu_accident_one_zero_two_a" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
     margin: 0px auto;
@@ -8824,23 +8736,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
     <br>
     </div>
 <!--question end-->
-<!--travel start-->
-    <label for="textarea2b">Travel Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="travel_expen" id="travel_expen_insu" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Actual Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="actua_exp" id="actua_exp_insu" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Miscellaneous Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="misc_e" id="misc_e_insu" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-
-<!--travel end-->
     <label for="textarea2b">Final Comments :<span style="color: rgb(246, 16, 63);"></span></label>
 <textarea cols="40" rows="8" name="insu_final_one_zero_one" id="insu_final_one_zero_one" placeholder="Insured Details Version of the Accident" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
     margin: 0px auto;
@@ -8849,23 +8744,6 @@ setInterval(function(){CharacterCount('messageText_insu','CharCountLabel1_insu')
 <!--insured details 101 end-->
 <!--policy details 106 start-->
 <div id="plociy_one_zero_six">
-<!--travel start-->
-    <label for="textarea2b">Travel Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="travel_expen" id="travel_expen" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Actual Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="actua_exp" id="actua_exp" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-    <br>
-        <label for="textarea2b">Miscellaneous Expense:<span style="color: rgb(246, 16, 63);"></span></label>
-<textarea cols="40" rows="8" name="misc_e" id="misc_e" placeholder="" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
-    margin: 0px auto;
-    border: 1px solid rgb(204, 204, 204);"></textarea>
-
-<!--travel end-->
     <label for="textarea2b">Final Comments :<span style="color: rgb(246, 16, 63);"></span></label>
 <textarea cols="40" rows="8" name="insu_final_one_zero_six" id="insu_final_one_zero_six" placeholder="Policy Details Version of the Accident" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow fincom" style="width: 96%;
     margin: 0px auto;
