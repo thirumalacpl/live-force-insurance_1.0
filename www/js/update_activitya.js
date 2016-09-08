@@ -10,7 +10,13 @@ $('.ajax-upload-dragdrop').remove();
 $('#intlife').hide();
 $('.uii').hide();
 $.mobile.loading("hide");
+/*var status_val_inpro = $('input:radio[name=radio-choice-a]:checked').val();
+alert(status_val_inpro);
 
+if(status_val_inpro == 'Verified'){
+
+$("#radio-choice-ab").attr('checked', 'checked');
+}*/
 
 //insurance start
   $('#radio_insur_hs').hide();
@@ -139,7 +145,6 @@ function assignValues(){
   var region=regionArray_array.region;
   var user_id=regionArray_array.user_id;
   var state=regionArray_array.state;
-   var user_id_su=regionArray_array.user_id;
 //alert(region_num);
 username=regionArray_array.username;
 //alert(username);
@@ -202,6 +207,7 @@ $('.chatshowhide').show();
 if(status_val_inpro == 'Verified' || status_val_inpro == 'Notverified' ){
 $('.verinot').show();
 $('.chatshowhide').hide();
+
 }
 /*$(document).off('click', '#veriu').on('click', '#veriu', function() {
   alert('1');
@@ -269,10 +275,16 @@ if(qualification_id == '97'){
       $('#insu_investiagtor_nine_seven_b').empty();
       $('#owner_driver_two_field_hundred').hide();
       $('#plociy_one_zero_six').hide();
-      $('#accident_show').show();
+    $('#accident_show').show();
 
   }
 });
+/*$( '#radio-choice-ab-inpro' ).click(function() {
+  alert('97');
+  if(qualification_id == '97'){
+    $('#accident_show').hide();
+  }
+});*/
 
 }
 		//fir
@@ -488,7 +500,7 @@ var formData = $("#callAjaxForm").serialize();
 //alert('updateactivitya msg');
 $.ajax({
   type: "POST",
-url: "http://staging.eimpressive.com/slim/slim-insu-quest/chat_insu.php?loginistant_insu="+loginistant_insu+"&verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&status_val_inpro="+status_val_inpro+"&remarkg="+remarkg+"&qualification_id="+qualification_id+"&username="+username+"&typofver="+typofver+"&pertobever="+pertobever+"&pertobeverlast="+pertobeverlast+"&task="+task+"&eeemail="+eeemail+"&user_id="+user_id,
+url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/chat_insu.php?loginistant_insu="+loginistant_insu+"&verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&status_val_inpro="+status_val_inpro+"&remarkg="+remarkg+"&qualification_id="+qualification_id+"&username="+username+"&typofver="+typofver+"&pertobever="+pertobever+"&pertobeverlast="+pertobeverlast+"&task="+task+"&eeemail="+eeemail+"&user_id="+user_id,
 
   data: formData,
   success: onSuccess,
@@ -500,17 +512,10 @@ url: "http://staging.eimpressive.com/slim/slim-insu-quest/chat_insu.php?loginist
 document.getElementById('messageText_insu').value="";
 }
 
-var firc=document.getElementById('firc').value;
-var fircmv=document.getElementById('fircmv').value;
-var firccs=document.getElementById('firccs').value;
-var fircps=document.getElementById('fircps').value;
-
 if(status_val_inpr_inpro != 'Inprogress_ins'){//radio button
 //fir version of the accident start
-
 if(qualification_id == '97'){
 	//alert('97');
-  if(firc != '' && fircmv != ''  && firccs != ''  && fircps != ''){
 if(insu_accident_nine_seven_a != '' && insu_investiagtor_nine_seven_b != ''){
 
 /*  document.getElementById('insu_accident_nine_seven_a').value = "";
@@ -536,7 +541,9 @@ alert(insu_investiagtor_nine_seven_b+'insu_investiagtor_nine_seven_b');*/
 var status="FV";
 
 $.ajax({
-    url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_seven_a="+insu_accident_nine_seven_a+"&insu_investiagtor_nine_seven_b="+insu_investiagtor_nine_seven_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state+"&firc="+firc+"&fircmv="+fircmv+"&firccs="+firccs+"&fircps="+fircps+"&user_id_su="+user_id_su,
+    url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_seven_a="+insu_accident_nine_seven_a+"&insu_investiagtor_nine_seven_b="+insu_investiagtor_nine_seven_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+//  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_hundred_a="+insu_accident_hundred_a+"&insu_investiagtor_hundred_b="+insu_investiagtor_hundred_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  //url: 'http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/index_verifd_insu.php?',
   data:$('#insuform').serialize(),
   type: 'post',                   
   async: 'true',
@@ -598,8 +605,23 @@ alert('Network error has occurred please try again!');
 }
 });
 
+/*$.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+  options.async = true;
+});
 
-}
+var formData = $("#insuform").serialize();
+alert('drop button value insert 97');
+$.ajax({
+  type: "POST",
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_seven_a="+insu_accident_nine_seven_a+"&insu_investiagtor_nine_seven_b="+insu_investiagtor_nine_seven_b+"&status="+status,
+  data: formData,
+  success: onSuccessad,
+  async: 'true',
+  crossDomain: true,
+  dataType: 'json',
+  error: onErrorad
+});*/
+
 }
 }
 //fir version of the accident end
@@ -630,9 +652,9 @@ document.getElementById('insu_final_one_zero_six').value = "";
 var status="OV";
 
 $.ajax({
-  //url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_hundred_a="+insu_accident_hundred_a+"&insu_investiagtor_hundred_b="+insu_investiagtor_hundred_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state+"&user_id_su="+user_id_su,
-  //url: 'http://staging.eimpressive.com/slim/slim-insu-quest/index_verifd_insu.php?',
+  //url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_hundred_a="+insu_accident_hundred_a+"&insu_investiagtor_hundred_b="+insu_investiagtor_hundred_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  //url: 'http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/index_verifd_insu.php?',
   data:$('#insuform').serialize(),
   type: 'post',                   
   async: 'true',
@@ -695,6 +717,23 @@ alert('Network error has occurred please try again!');
 });
 
 
+/*$.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+  options.async = true;
+});
+
+var formData = $("#insuform").serialize();
+alert('drop button value insert 100');
+$.ajax({
+  type: "POST",
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_hundred_a="+insu_accident_hundred_a+"&insu_investiagtor_hundred_b="+insu_investiagtor_hundred_b+"&status="+status,
+  data: formData,
+  success: onSuccessad,
+  async: 'true',
+  crossDomain: true,
+  dataType: 'json',
+  error: onErrorad
+});*/
+
 }
 }       
 //owner driver details end
@@ -702,12 +741,6 @@ alert('Network error has occurred please try again!');
 var insu_accident_nine_nine_a=document.getElementById('insu_accident_nine_nine_a').value;
 var insu_investiagtor_nine_nine_b=document.getElementById('insu_investiagtor_nine_nine_b').value;
 
-var outdria=document.getElementById('outdria').value;
-var outdrib=document.getElementById('outdrib').value;
-var outdric=document.getElementById('outdric').value;
-var outdrid=document.getElementById('outdrid').value;
-var outdrie=document.getElementById('outdrie').value;
-var outdrif=document.getElementById('outdrif').value;
 //alert(insu_accident_nine_nine_a+'1');
 //alert(insu_investiagtor_nine_nine_b+'2');
 if(qualification_id == '99'){
@@ -735,8 +768,8 @@ alert(state+'state');*/
 var status="DV";
 
 $.ajax({
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_nine_a="+insu_accident_nine_nine_a+"&insu_investiagtor_nine_nine_b="+insu_investiagtor_nine_nine_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state+"&outdria="+outdria+"&outdrib="+outdrib+"&outdric="+outdric+"&outdrid="+outdrid+"&outdrie="+outdrie+"&outdrif="+outdrif+"&user_id_su="+user_id_su,
-  //url: 'http://staging.eimpressive.com/slim/slim-insu-quest/index_verifd_insu.php?',
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_nine_a="+insu_accident_nine_nine_a+"&insu_investiagtor_nine_nine_b="+insu_investiagtor_nine_nine_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  //url: 'http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/index_verifd_insu.php?',
   data:$('#insuform').serialize(),
   type: 'post',                   
   async: 'true',
@@ -806,7 +839,7 @@ var formData = $("#insuform").serialize();
 alert('drop button value insert 99');
 $.ajax({
   type: "POST",
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_nine_a="+insu_accident_nine_nine_a+"&insu_investiagtor_nine_nine_b="+insu_investiagtor_nine_nine_b+"&status="+status,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_nine_a="+insu_accident_nine_nine_a+"&insu_investiagtor_nine_nine_b="+insu_investiagtor_nine_nine_b+"&status="+status,
   data: formData,
   success: onSuccessad,
   async: 'true',
@@ -822,36 +855,12 @@ $.ajax({
 var insu_accident_one_zero_two_a=document.getElementById('insu_accident_one_zero_two_a').value;
 var insu_investiagtor_one_zero_two_b=document.getElementById('insu_investiagtor_one_zero_two_b').value;
 
-var claiquesa=document.getElementById('claiquesa').value;
-var claiquesb=document.getElementById('claiquesb').value;
-var claiquesc=document.getElementById('claiquesc').value;
-var claiquesd=document.getElementById('claiquesd').value;
-var claiquese=document.getElementById('claiquese').value;
-var claiquesf=document.getElementById('claiquesf').value;
-var claiquesg=document.getElementById('claiquesg').value;
-var claiquesh=document.getElementById('claiquesh').value;
-var claiquesi=document.getElementById('claiquesi').value;
-var claiquesj=document.getElementById('claiquesj').value;
-var claiquesk=document.getElementById('claiquesk').value;
 //alert(insu_accident_nine_nine_a+'1');
 //alert(insu_investiagtor_nine_nine_b+'2');
 if(qualification_id == '102'){
 	//alert('102');
 //claimant details start
-if(claiquesa != '' && claiquesb != '' && claiquesc != '' && claiquesd != '' && claiquese != '' && claiquesf != '' && claiquesg != '' && claiquesh != '' && claiquesi != '' && claiquesj != '' && claiquesk != ''){
 if(insu_accident_one_zero_two_a != '' && insu_investiagtor_one_zero_two_b != ''){
-
-/*alert(claiquesa+'claiquesa');
-alert(claiquesb+'claiquesb');
-alert(claiquesc+'claiquesc');
-alert(claiquesd+'claiquesd');
-alert(claiquese+'claiquese');
-alert(claiquesf+'claiquesf');
-alert(claiquesg+'claiquesg');
-alert(claiquesh+'claiquesh');
-alert(claiquesi+'claiquesi');
-alert(claiquesj+'claiquesj');
-alert(claiquesk+'claiquesk');*/
 
   document.getElementById('insu_accident_nine_seven_a').value = "";
 document.getElementById('insu_investiagtor_nine_seven_b').value = "";
@@ -873,8 +882,8 @@ alert(state+'state');*/
 var status="CV";
 
 $.ajax({
-//  url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_one_zero_two_a="+insu_accident_one_zero_two_a+"&insu_investiagtor_one_zero_two_b="+insu_investiagtor_one_zero_two_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state+"&claiquesa="+claiquesa+"&claiquesb="+claiquesb+"&claiquesc="+claiquesc+"&claiquesd="+claiquesd+"&claiquese="+claiquese+"&claiquesf="+claiquesf+"&claiquesg="+claiquesg+"&claiquesh="+claiquesh+"&claiquesi="+claiquesi+"&claiquesj="+claiquesj+"&claiquesk="+claiquesk+"&user_id_su="+user_id_su,
+//  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_one_zero_two_a="+insu_accident_one_zero_two_a+"&insu_investiagtor_one_zero_two_b="+insu_investiagtor_one_zero_two_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
   data:$('#insuform').serialize(),
   type: 'post',                   
   async: 'true',
@@ -936,8 +945,23 @@ alert('Network error has occurred please try again!');
 }
 });
 
+/*$.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+  options.async = true;
+});
 
-}
+var formData = $("#insuform").serialize();
+//alert('drop button value insert 102');
+$.ajax({
+  type: "POST",
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_one_zero_two_a="+insu_accident_one_zero_two_a+"&insu_investiagtor_one_zero_two_b="+insu_investiagtor_one_zero_two_b+"&status="+status,
+  data: formData,
+  success: onSuccessad,
+  async: 'true',
+  crossDomain: true,
+  dataType: 'json',
+  error: onErrorad
+});*/
+
 }
 }
 //claimant details end
@@ -946,21 +970,12 @@ var insu_accident_nine_five_a=document.getElementById('insu_accident_nine_five_a
 var insu_inves_nine_five_b=document.getElementById('insu_inves_nine_five_b').value;
 var insu_final_nine_five_c=document.getElementById('insu_final_nine_five_c').value;
 
-var accquesa=document.getElementById('accquesa').value;
-var accquesb=document.getElementById('accquesb').value;
-var accquesc=document.getElementById('accquesc').value;
-
-/*alert(accquesa+'1');
-alert(accquesb+'2');
-alert(accquesc+'3');*/
-
 //alert(insu_accident_nine_five_a+'1');
 //alert(insu_inves_nine_five_b+'2');
 //alert(insu_final_nine_five_c+'2');
 if(qualification_id == '95'){
 	//alert('95');
 //accident details start
-if(accquesa != '' && accquesb != '' && accquesc !=''){
 if(insu_accident_nine_five_a != '' && insu_inves_nine_five_b != '' && insu_final_nine_five_c !=''){
 
   document.getElementById('insu_accident_nine_seven_a').value = "";
@@ -983,9 +998,9 @@ alert(state+'state');*/
 var status="AC";
 
 $.ajax({
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&accquesa="+accquesa+"&accquesb="+accquesb+"&accquesc="+accquesc+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state+"&user_id_su="+user_id_su,
-  //url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_nine_a="+insu_accident_nine_nine_a+"&insu_investiagtor_nine_nine_b="+insu_investiagtor_nine_nine_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
-  //url: 'http://staging.eimpressive.com/slim/slim-insu-quest/index_verifd_insu.php?',
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  //url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_nine_a="+insu_accident_nine_nine_a+"&insu_investiagtor_nine_nine_b="+insu_investiagtor_nine_nine_b+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  //url: 'http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/index_verifd_insu.php?',
   data:$('#insuform').serialize(),
   type: 'post',                   
   async: 'true',
@@ -1047,9 +1062,23 @@ alert('Network error has occurred please try again!');
 }
 });
 
+/*$.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+  options.async = true;
+});
 
+var formData = $("#insuform").serialize();
+alert('drop button value insert 95');
+$.ajax({
+  type: "POST",
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status,
+  data: formData,
+  success: onSuccessad,
+  async: 'true',
+  crossDomain: true,
+  dataType: 'json',
+  error: onErrorad
+});*/
 
-}
 }
 }
 //accident details end
@@ -1079,8 +1108,8 @@ document.getElementById('insu_inves_nine_five_b').value = "";
 var status="ASDE";
 
 $.ajax({
-  //url: "http://staging.eimpressive.com/slim/slim-insu-quest/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_six="+insu_final_one_zero_six+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  //url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_six="+insu_final_one_zero_six+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
   data:$('#insuform').serialize(),
   type: 'post',                   
   async: 'true',
@@ -1151,14 +1180,13 @@ var formData = $("#insuform").serialize();
 alert('drop button value insert 106');
 $.ajax({
   type: "POST",
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_six="+insu_final_one_zero_six+"&status="+status,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_six="+insu_final_one_zero_six+"&status="+status,
   data: formData,
   success: onSuccessad,
   async: 'true',
   crossDomain: true,
   dataType: 'json',
   error: onErrorad
-
 });*/
 
 }
@@ -1167,25 +1195,19 @@ $.ajax({
 //insured final command details start
 var insu_final_one_zero_one=document.getElementById('insu_final_one_zero_one').value;
 
-var insuria=document.getElementById('insuria').value;
-var insurib=document.getElementById('insurib').value;
-var insuric=document.getElementById('insuric').value;
-var insurid=document.getElementById('insurid').value;
-var insurie=document.getElementById('insurie').value;
-var insurif=document.getElementById('insurif').value;
-
-
 //alert(insu_final_one_zero_one+'1');
 
 if(qualification_id == '101'){
 	//alert('101');
-	if(insuria != '' && insurib != '' && insuric !='' && insurid !='' && insurie !='' && insurif !='') {
+	
 if(insu_final_one_zero_one != '' ){
 
 var status="ASD";
 
 $.ajax({
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_one="+insu_final_one_zero_one+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state+"&insuria="+insuria+"&insurib="+insurib+"&insuric="+insuric+"&insurid="+insurid+"&insurie="+insurie+"&insurif="+insurif+"&user_id_su="+user_id_su,
+  //url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/insur.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_accident_nine_five_a="+insu_accident_nine_five_a+"&insu_inves_nine_five_b="+insu_inves_nine_five_b+"&insu_final_nine_five_c="+insu_final_nine_five_c+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+ // url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_six="+insu_final_one_zero_six+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_one="+insu_final_one_zero_one+"&status="+status+"&region="+region+"&user_id="+user_id+"&state="+state,
   data:$('#insuform').serialize(),
   type: 'post',                   
   async: 'true',
@@ -1255,7 +1277,7 @@ var formData = $("#insuform").serialize();
 alert('drop button value insert 101');
 $.ajax({
   type: "POST",
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_one="+insu_final_one_zero_one+"&status="+status,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_one="+insu_final_one_zero_one+"&status="+status,
   data: formData,
   success: onSuccessad,
   async: 'true',
@@ -1264,7 +1286,6 @@ $.ajax({
   error: onErrorad
 });*/
 
-}
 }
 }
 //insured final command details end
@@ -1379,7 +1400,7 @@ var formData = $("#callAjaxForm").serialize();
 //alert('drop button value insert 84 85');
 $.ajax({
   type: "POST",
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/delete.php?del_id="+del_id,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/delete.php?del_id="+del_id,
 
   data: formData,
   success: onSuccess,
@@ -1590,7 +1611,7 @@ var formData = $("#callAjaxForm").serialize();
 //alert('drop button value insert 84 85');
 $.ajax({
   type: "POST",
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/delete.php?del_id="+del_id,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/delete.php?del_id="+del_id,
 
   data: formData,
   success: onSuccess,
@@ -1639,7 +1660,7 @@ var formData = $("#callAjaxForm").serialize();
 
 $.ajax({
   type: "POST",
-url: "http://staging.eimpressive.com/slim/slim-insu-quest/sdoc.php?verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&res="+res+"&qualification_id="+qualification_id+"&user_id="+user_id,
+url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/sdoc.php?verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&res="+res+"&qualification_id="+qualification_id+"&user_id="+user_id,
 
   data: formData,
   success: onSuccess,
@@ -1724,7 +1745,7 @@ var formData = $("#callAjaxForm").serialize();
 
 $.ajax({
   type: "POST",
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/chat.php?loginistant="+loginistant+"&verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&status_val_inpro="+status_val_inpro+"&remarkg="+remarkg+"&qualification_id="+qualification_id+"&username="+username+"&typofver="+typofver+"&pertobever="+pertobever+"&pertobeverlast="+pertobeverlast+"&task="+task+"&eeemail="+eeemail+"&user_id="+user_id,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/chat.php?loginistant="+loginistant+"&verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&status_val_inpro="+status_val_inpro+"&remarkg="+remarkg+"&qualification_id="+qualification_id+"&username="+username+"&typofver="+typofver+"&pertobever="+pertobever+"&pertobeverlast="+pertobeverlast+"&task="+task+"&eeemail="+eeemail+"&user_id="+user_id,
 
   data: formData,
   success: onSuccess,
@@ -1750,7 +1771,7 @@ var formData = $("#callAjaxForm").serialize();
 //alert('drop button value insert 84 85');
 $.ajax({
   type: "POST",
-  url: "http://staging.eimpressive.com/slim/slim-insu-quest/lifeint.php?verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&qualification_id="+qualification_id+"&inte="+inte+"&inte_rat="+inte_rat+"&beh="+beh+"&beh_rat="+beh_rat+"&hab="+hab+"&hab_rat="+hab_rat,
+  url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/lifeint.php?verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&qualification_id="+qualification_id+"&inte="+inte+"&inte_rat="+inte_rat+"&beh="+beh+"&beh_rat="+beh_rat+"&hab="+hab+"&hab_rat="+hab_rat,
 
   data: formData,
   success: onSuccess,
@@ -1778,7 +1799,7 @@ var formData = $("#callAjaxForm").serialize();
 //alert('updateactivitya msg');
 $.ajax({
   type: "POST",
-url: "http://staging.eimpressive.com/slim/slim-insu-quest/chat.php?loginistant="+loginistant+"&verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&status_val_inpro="+status_val_inpro+"&remarkg="+remarkg+"&qualification_id="+qualification_id+"&username="+username+"&typofver="+typofver+"&pertobever="+pertobever+"&pertobeverlast="+pertobeverlast+"&task="+task+"&eeemail="+eeemail+"&user_id="+user_id,
+url: "http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/chat.php?loginistant="+loginistant+"&verification_user_id="+verification_user_id+"&coordinator_id="+coordinator_id+"&status_val_inpro="+status_val_inpro+"&remarkg="+remarkg+"&qualification_id="+qualification_id+"&username="+username+"&typofver="+typofver+"&pertobever="+pertobever+"&pertobeverlast="+pertobeverlast+"&task="+task+"&eeemail="+eeemail+"&user_id="+user_id,
 
   data: formData,
   success: onSuccess,
@@ -1811,7 +1832,7 @@ document.getElementById('remarkg').value = "";
  alert('Verification Record Submitted Successfully');
 //alert('Verification Record Submitted Successfully bfr sdsdf');
 // $('#myPopupr').hide();
-$.ajax({url: 'http://staging.eimpressive.com/slim/slim-insu-quest/count.php?region='+region+"&user_id="+user_id+"&state="+state,
+$.ajax({url: 'http://insurance.fourthforce.in/slim_insurance/slim_four_ripsssjs/count.php?region='+region+"&user_id="+user_id+"&state="+state,
   data:$('#update_to_inprogressw').serialize(),
   type: 'post',                   
   async: 'true',
